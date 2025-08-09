@@ -141,6 +141,27 @@ body {
   .btn {font-size:.84rem; --h:48px;}
   .divider {margin:.2rem 0 .1rem;}
   body, .card { -webkit-overflow-scrolling: touch; }
+  html, body {overflow:hidden;} /* منع تمرير عمودي غير ضروري */
+  .center-wrapper {min-height:100svh;} /* معالجة أشرطة النظام الديناميكية */
+}
+
+/* إخفاء الفوتر على الشاشات القصيرة جداً للحفاظ على المساحة للأزرار */
+@media (max-height:500px){
+  .foot {display:none;}
+  .card {gap:.7rem;}
+}
+
+/* تحسين إضافي لأجهزة أصغر من 360px */
+@media (max-width:360px){
+  .center-wrapper {padding:.75rem;}
+  .btn {font-size:.8rem; --h:46px;}
+  .card {padding:1.2rem .95rem .85rem;}
+}
+
+/* أجهزة أعرض أقل (≤340px) */
+@media (max-width:340px){
+  .btn {font-size:.76rem;}
+  .logo-box img {width:88px;height:88px;}
 }
 
 /* تحسين التباين في وضع التباين العالي */
