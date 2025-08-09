@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://g-raduate.github.io/graduate-profile/sitemap.xml
