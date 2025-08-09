@@ -55,7 +55,7 @@ body {
   pointer-events:none;
 }
 
-.center-wrapper {min-height:100%;display:grid;place-items:center;padding:2rem;}
+.center-wrapper {min-height:100dvh;display:grid;place-items:center;padding:2rem;}
 
 .card {
   width:100%; max-width:360px;
@@ -134,10 +134,13 @@ body {
 .foot a:hover {text-decoration:underline;}
 
 /* استجابة */
-@media (max-width:420px){
-  .card {padding:1.9rem 1.3rem 1.3rem;}
-  .btn {font-size:.88rem; --h:50px;}
-  .logo-box img {width:108px;height:108px;}
+@media (max-width:480px){
+  .center-wrapper {padding:1.2rem;}
+  .card {padding:1.4rem 1.1rem 1rem; gap:.85rem; max-width:340px;}
+  .logo-box img {width:96px;height:96px;}
+  .btn {font-size:.84rem; --h:48px;}
+  .divider {margin:.2rem 0 .1rem;}
+  body, .card { -webkit-overflow-scrolling: touch; }
 }
 
 /* تحسين التباين في وضع التباين العالي */
