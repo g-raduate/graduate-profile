@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>تطبيق خريج | روابط التحميل الرسمية</title>
+  <meta name="description" content="الصفحة الرسمية لتحميل تطبيق خريج: روابط متجر بلاي، آب ستور، حساب إنستغرام وقناة تيليجرام." />
+  <meta name="keywords" content="خريج, تطبيق خريج, graduate app, تحميل خريج, روابط خريج" />
+  <meta name="author" content="خريج" />
+  <meta property="og:title" content="تطبيق خريج" />
+  <meta property="og:description" content="حمّل تطبيق خريج و تابعنا على المنصات الاجتماعية." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://USER.github.io/REPO/images/logo.png" />
+  <meta property="og:locale" content="ar_AR" />
+  <meta name="twitter:card" content="summary" />
+  <!-- ضع favicon.png أو favicon.ico في الجذر -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- ملاحظات: عند النشر على GitHub Pages استبدل USER و REPO أعلاه -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- أيقونات (اختياري) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="bg-overlay"></div>
+  <main class="center-wrapper">
+    <section class="card" role="group" aria-label="روابط التحميل و التواصل">
+      <div class="logo-box">
+        <!-- ضع شعارك داخل مجلد images واستبدل المسار أدناه -->
+        <img src="images/logo.png" alt="شعار خريج" loading="lazy" />
+      </div>
+      <nav class="links">
+  <a class="btn grad" href="https://play.google.com/store/apps/details?id=com.graduate1.gr&pcampaignid=web_share" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-google-play"></i></span>
+          <span>تحميل من كوكل بلاي</span>
+        </a>
+  <a class="btn grad" href="https://apps.apple.com/us/app/%D8%AE%D8%B1%D9%8A%D8%AC/id6621275645" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-apple"></i></span>
+          <span>تحميل من الابل ستور</span>
+        </a>
+        <hr class="divider" />
+  <a class="btn grad alt" href="https://www.instagram.com/g_raduate/" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-instagram"></i></span>
+          <span>Instagram</span>
+        </a>
+  <a class="btn grad alt" href="https://t.me/g_raduate" target="_blank" rel="noopener">
+          <span class="icon"><i class="fa-brands fa-telegram"></i></span>
+          <span>Telegram</span>
+        </a>
+      </nav>
+      <footer class="foot">
+        <small>© <span id="year"></span> خريج. جميع الحقوق محفوظة.</small>
+      </footer>
+    </section>
+  </main>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Ripple effect for buttons
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e){
+        const rect = this.getBoundingClientRect();
+        const span = document.createElement('span');
+        span.className = 'ripple';
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size/2;
+        const y = e.clientY - rect.top - size/2;
+        span.style.width = span.style.height = size + 'px';
+        span.style.left = x + 'px';
+        span.style.top = y + 'px';
+        this.appendChild(span);
+        setTimeout(()=> span.remove(), 650);
+      });
+    });
+  </script>
+</body>
+</html>
